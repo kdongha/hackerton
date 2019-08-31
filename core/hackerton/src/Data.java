@@ -2,13 +2,13 @@ import java.util.Arrays;
 
 public class Data {
 	String date;
-	String road_name; // ë„ë¡œ
-	String road_start; // ì‹œì 
+	String road_name; // ?„ë¡?
+	String road_start; // ?‹œ? 
 	String road_end; // ì¢…ì 
 	double length; // ê¸¸ì´ 
-	int road_cnt; // ì°¨ì„ ì •ë³´
-	long flow_table[]; // ì‹œê°„ë³„ ìœ ëŸ‰ flow
-	double speed_table[];// ì‹œê°„ë³„ í‰ê·  ì†ë„ speed
+	int road_cnt; // ì°¨ì„ ? •ë³?
+	long flow_table[]; // ?‹œê°„ë³„ ?œ ?Ÿ‰ flow
+	double speed_table[];// ?‹œê°„ë³„ ?‰ê·? ?†?„ speed
 	
 	double speed[][];
 	double density[][];
