@@ -30,10 +30,10 @@ public class DataMgr {
 			
 		}catch(FileNotFoundException e) {
 			e.printStackTrace();
-			System.out.println(path + " ê²½ë¡œë¥? ì°¾ì„?ˆ˜ ?—†?Šµ?‹ˆ?‹¤.");
+			System.out.println(path + " ê²½ë¡œë¥¼ ì°¾ì„ìˆ˜ ì—†ìŠµë‹ˆë‹¤");
 			return false;
 		}catch (IOException e) {
-			System.out.println("Wrtie IOException");
+			System.out.println("Write IOException");
 			e.printStackTrace();
 			return false;
 		}finally {
@@ -42,12 +42,12 @@ public class DataMgr {
 					bw.close();
 				} catch (IOException e) {
 					e.printStackTrace();
-					System.out.println("?ŒŒ?¼?¬?¸?„° ?‹«ê¸°ì˜¤ë¥? ");
+					System.out.println("íŒŒì¼í¬ì¸í„° ë‹«ê¸°ì˜¤ë¥˜ ");
 					return false;
 				}
 			}
 		}
-		System.out.println("?ŒŒ?¼ ???¥ ?™„ë£?!");
+		System.out.println("íŒŒì¼ ì €ì¥ ì™„ë£Œ!!");
 		return true;
 	}
 	
@@ -58,29 +58,29 @@ public class DataMgr {
 			br = Files.newBufferedReader(Paths.get(path));
 			Charset.forName("UTF-8");
 			
-			//?™?•˜?•¼ ?´ë¶?ë¶„ì—?„œ ?„?¬?¸?Š¸ ?µ?…‰?…˜ ë°œìƒ?•˜?Š”?°..?–´ì¼??ˆ˜? •?•˜?ƒ ?…‹?…‹
+			//ë™í•˜ì•¼ ì´ë¶€ë¶„ì—ì„œ ë„í¬ì¸íŠ¸ ìµì…‰ì…˜ ë°œìƒí•˜ëŠ”ë°..ì–´ì¼€ìˆ˜ì •í•˜ëƒ ã…‹ã…‹
 			while( (str = br.readLine().trim()) != null) {
 				String tmp[] = str.split(",");
 				if(tmp.length != 54) {
-					System.out.println("csv?ŒŒ?¼ ?°?´?„°ê°? ë¶?ì¡±í•©?‹ˆ?‹¤. ");
+					System.out.println("csvíŒŒì¼ ë°ì´í„°ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤. ");
 					return false;
 				}
 				addData(tmp);
 			}
 		}catch(NumberFormatException e) {
 			e.printStackTrace();
-			System.out.println("?˜ëª»ëœ ?ŒŒ?¼ ?˜•?‹?…?‹ˆ?‹¤.");
+			System.out.println("ì˜ëª»ëœ íŒŒì¼ í˜•ì‹ì…ë‹ˆë‹¤.");
 			return false;
 		}
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
-			System.out.println(path+" ?½?„ ?ˆ˜ ?—†?Šµ?‹ˆ?‹¤.");
+			System.out.println(path+" ì½ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			return false;
 		} catch(IOException e) {
 			System.out.println("Fail loadCSV");
 			return false;
 		} catch(NullPointerException e) {
-			System.out.println("?„?¬?¸?Š¸");
+			System.out.println("ë„í¬ì¸íŠ¸");
 			e.printStackTrace();
 			return false;
 		}finally {
@@ -89,12 +89,12 @@ public class DataMgr {
 					br.close();	
 				} catch (IOException e) {
 					e.printStackTrace();
-					System.out.println("?ŒŒ?¼ ?¬?¸?„° ?‹«ê¸°ì˜¤ë¥?");
+					System.out.println("íŒŒì¼ í¬ì¸í„° ë‹«ê¸°ì˜¤ë¥˜");
 					return false;
 				}
 			}
 		}
-		System.out.println(road_datas.size() +"ê°? ?°?´?„° load ?™„ë£?!");
+		System.out.println(road_datas.size() +"ê°œ ë°ì´í„° load ì™„ë£Œ!");
 		return true;
 	}
 	
